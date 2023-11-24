@@ -1,0 +1,92 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(new MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(primarySwatch: Colors.cyan, accentColor: Colors.orange),
+    home: new Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Flutter Dersleri",
+            style: TextStyle(fontSize: 36.0, color: Colors.white),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            debugPrint("FAB Tıklandı");
+          },
+          child: Icon(
+            Icons.access_alarms,
+            color: Colors.white,
+          ),
+        ),
+        body: Column(
+          children: <Widget>[
+            Text(
+              "Resim ve Buton Türleri",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            IntrinsicHeight(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.red[200],
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Image.asset("assets/images/resim-1.jpg"),
+                          Text("Asset Image"),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.red[200],
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          Image.network(
+                              "https://iasbh.tmgrup.com.tr/d8d94c/0/0/0/0/0/0?u=https://isbh.tmgrup.com.tr/sb/album/2020/10/23/son-dakika-insanlar-uzerinde-denenen-ilk-koronavirus-asisinda-flas-gelisme-sonuca-yaklasti-1603457846066.jpg&mw=752&mh=700"),
+                          Text("Network Image"),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.red[200],
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: <Widget>[
+                          CircleAvatar(
+                            child: Text("Emre"),
+                            backgroundColor: Colors.purple,
+                            foregroundColor: Colors.orange,
+                          ),
+                          Text("Circle Avatar"),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        )
+        // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        ),
+  ));
+}

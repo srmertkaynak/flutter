@@ -1,0 +1,76 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(new MaterialApp(
+    debugShowCheckedModeBanner: false,
+    theme: ThemeData(primarySwatch: Colors.cyan, accentColor: Colors.orange),
+    home: new Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Flutter Dersleri",
+            style: TextStyle(fontSize: 36.0, color: Colors.white),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            debugPrint("FAB Tıklandı");
+          },
+          child: Icon(
+            Icons.access_alarms,
+            color: Colors.white,
+          ),
+        ),
+        body: Column(
+          children: <Widget>[
+            Container(
+              color: Colors.red[100],
+              padding: EdgeInsets.all(20),
+              margin: EdgeInsets.all(2),
+              child: Text(
+                "S",
+                style: TextStyle(fontSize: 24),
+              ),
+            ),
+            Container(
+              color: Colors.red[100],
+              padding: EdgeInsets.all(20),
+              margin: EdgeInsets.all(2),
+              child: Text(
+                "L",
+                style: TextStyle(fontSize: 24),
+              ),
+            ),
+            Container(
+              color: Colors.red[100],
+              padding: EdgeInsets.all(20),
+              margin: EdgeInsets.all(2),
+              child: Text(
+                "E",
+                style: TextStyle(fontSize: 24),
+              ),
+            ),
+            Container(
+              color: Colors.red[100],
+              padding: EdgeInsets.all(20),
+              margin: EdgeInsets.all(2),
+              child: Text(
+                "R",
+                style: TextStyle(fontSize: 24),
+              ),
+            ),
+            Container(
+              color: Colors.red[100],
+              padding: EdgeInsets.all(20),
+              margin: EdgeInsets.all(2),
+              child: Text(
+                "İ",
+                style: TextStyle(fontSize: 24),
+              ),
+            ),
+          ],
+        )
+        // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        ),
+  ));
+}
